@@ -35,6 +35,7 @@ def hackathonget(request):
         prompt = request.data['prompt']
         result_obj = RecommendationSystemWrapper(prompt)
         result = result_obj.get_recommendations(prompt)
+        print(result)
         response = {
             "hackathons":result
         }

@@ -42,6 +42,7 @@ class RecommendationSystemWrapper:
             return pd.DataFrame()
 
     def clean_text(self, text):
+        text = str(text)
         stop_words = set(stopwords.words('english'))
         stemmer = PorterStemmer()
         tokens = word_tokenize(text.lower())
